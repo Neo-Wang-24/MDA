@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+#myVideo {
+    position: fixed;
+      left: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 80%;
+    padding: 20px;
+}
+
+#myBtn {
+    width: 100px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+.homeBtn {
+    width: 20px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.homeBtn:hover {
+    background: #ddd;
+    color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="assets/videos/Welcome.mp4" >
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+    <h1>Chevrolet Camaro</h1>
+        <img class="img-thumbnail" src="assets/images/logo.png" alt="logo">         <img class="img-thumbnail" src="assets/images/logo1.png" alt="logo">    
+        <p>The Chevrolet Camaro, manufactured by Chevrolet, was hardly a new idea; more like a hurried attempt to keep up with the recently launched/remarkably successful Ford Mustang. 
+      It started as a pony car, but later introduced muscle car versions in the market. Launched on 29 September, 1966, the Camaro comes in five distinct generations, with the last one being introduced on 16 March, 2009.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+  <a href="index.html" class="homeBtn">Enter Home page</a>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>

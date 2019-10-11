@@ -1,0 +1,517 @@
+
+body{
+	color: #77828b; 
+	font-size: 14px;
+	min-width: 200px;
+	font-family: "soleil", sans-serif;
+	font-weight: 300;
+}
+p, pre{
+	margin: 0.5em 0 1em;
+}
+a{
+	color: #0b2e42;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:active, a:hover{
+	text-decoration: underline;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+picture{
+	display: block;
+	position: relative;
+}
+picture p{
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+}
+.js picture{
+	opacity: 0;
+}
+.header-section{
+	background: #0b2e42; 
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	min-height: 800px;
+}
+.header-section .vid{
+	position: absolute;
+	top: -150px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.header-section h1{
+	color: #FFF;
+	max-width: 650px;
+	margin: 100px auto 40px;
+	font-size: 45px;
+	line-height: 40px;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-align: center;
+	font-family: "proxima-nova-extra-condensed", sans-serif;
+}
+.header-section h1 .guide{
+	font-size: 18px;
+	display: block;
+	font-family: "effra", sans-serif;
+	font-weight: 400;
+	letter-spacing: 12px;
+	line-height: 50px;
+}
+.header-section h1 .big{
+	font-weight: 800;
+	display: block;
+	font-family: "proxima-nova", sans-serif;
+}
+
+.social-links{
+	list-style: none;
+	margin: 0 auto;
+	max-width: 400px;
+	padding: 0;
+	text-align: center; 
+}
+.social-links li{
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.app{
+	margin-top: 400px;
+	background-color: #FFF; 
+	-webkit-transform: matrix(1,-0.09,0,1,0,0);
+	-moz-transform: matrix(1,-0.09,0,1,0px,0px);
+	-ms-transform: matrix(1,-0.09,0,1,0,0);
+	-o-transform: matrix(1,-0.09,0,1,0,0);
+	transform: matrix(1,-0.09,0,1,0,0);
+	filter: progid:DXImageTransform.Microsoft.Matrix( M11=1, M12=0, M21=-0.09, M22=1, SizingMethod='auto expand');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=-0.09, M22=1, SizingMethod='auto expand')";
+	overflow: hidden;
+}
+.app > .film{
+	width: 100%;
+	height: 24px;
+	background: #FFFFFF url('imgs/film-strip.png') repeat-x;
+}
+.app > .container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 1%;
+	padding-bottom: 180px;
+	-webkit-transform: matrix(1,0.09,0,1,0,0);
+	-moz-transform: matrix(1,0.09,0,1,0px,0px);
+	-ms-transform: matrix(1,0.09,0,1,0,0);
+	-o-transform: matrix(1,0.09,0,1,0,0);
+	transform: matrix(1,0.09,0,1,0,0);
+	filter: progid:DXImageTransform.Microsoft.Matrix( M11=1, M12=0, M21=0.09, M22=1, SizingMethod='auto expand');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=0.09, M22=1, SizingMethod='auto expand')";
+}
+
+.timeline{
+	position: relative;
+	top: 120px;
+}
+.timeline::before{
+	content: " ";
+	display: block;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	border-left: 1px solid #dce0df;
+	width: 0px;
+}
+.timeline > .entry{
+	position: relative;
+	margin-left: 34px;
+	margin-right: 15px;
+	padding: 30px 0;
+	max-width: 500px;
+}
+.timeline > .entry .wrapper{
+	position: relative;
+}
+.timeline > .entry .wrapper::before{
+	content: " ";
+	position: absolute;
+	border: 3px solid #0b2e42;
+	background-color: #FFF;
+	height: 12px;
+	width: 12px;
+	border-radius: 9px;
+	left: -33px;
+	top: 15px;
+	border-top-right-radius: 0px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.entry .year{
+	font-size: 40px;
+	display: block;
+	color: #0b2e42;
+	font-family: "proxima-nova-extra-condensed", sans-serif;
+	font-weight: bold; 
+}
+.entry h3{
+	letter-spacing: 5px;
+	font-weight: 600;
+	font-size: 14px;
+	color: #0b2e42;
+	text-transform: uppercase;
+	margin: 3px 0;
+	font-family: "effra", sans-serif;
+}
+.entry h3 span{
+	display: block;
+}
+.entry picture{
+	margin: 50px 0 0;
+}
+.content p{
+	position: relative;
+	z-index: 5;
+}
+.entry .image-area {
+	position: relative;
+}
+.entry .image-area .circle {
+	position: absolute;
+	height: 280px;
+	width: 280px;
+	border-radius: 140px;
+	background-color: #eef0f2;
+	top: -50px;
+	right: -20px;
+}
+.entry:nth-child(2n) .image-area .circle{
+	left: -10px;
+	right: auto;
+}
+.entry .titles{
+	position: relative;
+	margin: -20px auto 10px;
+	display: block;
+}
+.entry h2{
+	color: #0b2e42;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-family: "proxima-nova", sans-serif;
+	font-size: 38px;
+	line-height: 32px;
+	text-align: center;
+	margin: 0 auto 30px;
+}
+.entry h4{
+	font-weight: 400;
+	font-family: "proxima-nova-extra-condensed", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.entry h4 strong{
+	font-weight: 600; 
+}
+
+
+
+
+
+
+
+
+
+.entry .film-stats{
+	color: #0c2e43;
+	list-style: none;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "proxima-nova-extra-condensed", sans-serif;
+}
+.entry .film-stats > li{
+	display: inline-block;
+	box-sizing: border-box;
+	border-top: 1px dashed #0c2e43;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0 0;
+}
+.entry .film-stats > li:first-child{
+	border-top: none;
+}
+.entry .film-stats .name{
+	display: block;
+	text-transform: uppercase;
+	font-size: 17px;
+	padding-top: 5px;
+}
+.entry .film-stats .value{
+	display: block;
+	font-size: 26px;
+	font-weight: bold;
+	padding: 5px 0 0;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.clearall{
+	float: none;
+	clear: both;
+	position: relative;
+}
+.timeline .clearall{
+	width: 100%;
+}
+
+footer{
+	position: absolute;
+	background-color: #FFF;
+	width: 100%; 
+	margin-top: -100px;
+}
+footer .social-links {
+	margin-top: 50px;
+}
+footer .colophon{
+	font-size: 13px;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 50px 20px 60px;
+}
+footer .colophon .brand-link{
+	display: block;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+footer .credits{
+	text-align: center;
+	padding: 20px;
+	background-color: #e9ecee; 
+	color: #0c2e43; 
+}
+footer .credits small{
+	margin: 0 auto;
+	max-width: 900px;
+	display: block;
+}
+footer .credits small a{
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+@media all and (min-width: 420px) {
+	.header-section h1 {
+		font-size: 100px;
+		position: relative;
+		font-size: 65px;
+		line-height: 60px;
+	}
+	.entry h2{
+		font-size: 65px;
+		line-height: 46px;
+	}
+	.entry .titles{
+		margin: -30px auto 10px;
+	}
+	.entry h3 span{
+		display: inline;
+	}
+	.entry h4{
+		font-size: 20px;
+	}
+	.entry .image-area .circle {
+		position: absolute;
+		height: 320px;
+		width: 320px;
+		border-radius: 160px;
+		background-color: #eef0f2;
+		top: -50px;
+		right: -20px;
+	}
+	.entry .film-stats{
+		margin-right: -15px;
+		margin-left: -15px;
+		box-sizing: border-box;
+	}
+	.entry .film-stats:before, .entry .film-stats:after{
+		display: table;
+		content: " ";
+	}
+	.entry .film-stats > li{
+		width: 33.3%;
+		border-left: 1px dashed #0c2e43;
+		border-top: none;
+		padding: 15px 10px;
+		min-height: 80px;
+		box-sizing: border-box;
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left; 
+	}
+	.entry .film-stats > li:first-child{
+		border-left: none;
+	}
+
+}
+
+@media all and (min-width: 720px) {
+	.header-section h1 {
+		font-size: 100px;
+		position: relative;
+		font-size: 100px;
+		line-height: 90px;
+		max-width: 100%;
+	}
+	.header-section h1 .big{
+		font-size: 110px;
+	}
+
+	.app {
+		margin-top: 500px;
+	}
+
+	.timeline::before{
+		left: 50%;
+	}
+	.timeline > .entry{
+		margin-left: 0;
+		margin-right: 0;
+		display: block;
+		box-sizing: border-box;
+		max-width: 50%;
+		float: left;
+    	clear: left;
+		padding: 50px 0 250px; 
+	}
+	.timeline > .entry:nth-child(2n) {
+	    float: right;
+	    clear: right;
+	}
+	.timeline > .entry#the-lovebug{
+		padding-top: 500px;
+	}
+	.timeline > .entry#the-getaway {
+	    padding-bottom: 50px;
+	}
+	.entry:nth-child(2n) .image-area .circle{
+		left: -20px;
+		right: auto;
+	}
+	.entry > .wrapper{
+		padding: 0 30px 0 10px;
+	}
+	.entry:nth-child(2n) > .wrapper{
+		padding: 0 10px 0 30px;
+	}
+	.timeline > .entry .wrapper::before{
+		right: -10px;
+		left: auto;
+		top: 70px;
+		-ms-transform: rotate(-135deg);
+		-webkit-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+	}
+	.timeline > .entry:nth-child(2n) .wrapper::before{
+		right: auto;
+		left: -8px;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.entry h4{
+		font-size: 24px;
+	}
+	.entry .film-stats .name{
+		min-height: 34px;
+	}
+
+
+	.header-row{
+		box-sizing: border-box;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.header-row:before, .header-row:after{
+		display: table;
+		content: " ";
+		clear: both;
+	}
+	.header-row > div{
+		box-sizing: border-box;
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+	}
+	.header-row .content-year{
+		width: 30%;
+	}
+	.header-row .content{
+		width: 70%;
+	}
+	.timeline > .entry:nth-child(2n) .content-year{
+		float: right;
+	}
+	.timeline > .entry:nth-child(2n) .content, 
+	.timeline > .entry:nth-child(2n) .content h3,
+	.timeline > .entry:nth-child(2n) .content p{
+		text-align: right;
+	}
+	.entry .year{
+		padding-top: 35px;
+		font-size: 58px;
+	}
+	.timeline .clearall{
+		height: 20px;
+		background-color: #FFF;
+	}
+	.timeline .clearall::before{
+		content: " ";
+		display: block;
+		position: absolute;
+		left: 50%;
+		width: 50px;
+		margin-left: -25px;
+		border-top: 1px solid #dce0df;
+		height: 20px;
+		bottom: 0px;
+	}
+	footer .colophon .brand-link{
+		padding: 0 20px 20px;
+		float: left;
+	}
+}
+
+
+@media all and (min-width: 900px) {
+
+	.header-row .content-year{
+		width: 25%;
+	}
+	.header-row .content{
+		width: 75%;
+	}
+
+
+}
+
+

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
+
+    <!-- X3DOM.css -->
+    <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" crossorigin="anonymous">
+
+      <!-- Lets have some fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <!-- fancyBox3 -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="css/Top_style.css">
+
+
+    <title>Model</title>
+
+  </head>
+  <body>
+       <!--top_button-->
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+ <body onload="myFunction()">
+ <!-- The header with the logo barnd and naviugation menu -->
+ <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+ 
+       <!-- The logo Brand -->
+       <div class="logo">
+         <a class="navbar-brand" href="#">
+           <h1>Chevrolet</h1>
+           <h2>CAMARO </h2>
+           <h3>Model</h3>
+           <p>2014</p>
+         </a>
+       </div>
+         
+       <!-- Navbar Menu Icon -->
+       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       
+       <!-- link Menu Icon button to the links class navbar-collapse selector] -->
+       <div class="collapse navbar-collapse">
+           <!-- Links -->
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+               <a class="nav-link active" href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="history.html"><i class="fa fa-book" aria-hidden="true"></i>History</a>
+             </li>
+         
+             <!-- Dropdown -->
+             <li class="nav-item">
+               <a class="nav-link" href="video.html"><i class="fa fa-video" aria-hidden="true"></i>Video</a> 
+             </li>
+                 <li class="nav-item">
+               <a class="nav-link" href="game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>Game</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#translateModal"><i class="fa fa-question" ></i>Translate</a>
+               </li>
+           </ul>
+       </div>
+ </nav>
+
+
+      
+
+          
+
+          <!-- This is the content for X3D models and 3D Image Gallery -->
+          <div class="main_contents" >
+            <!-- Row to hold the interaction panels -->
+          <div  class="row" >
+              <!-- Column for the camera view controls -->
+              <div class="col-sm-7">
+                  <div class="card text-left">
+                      <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Camera</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-body">
+                        <div class="card-Title x3dCamera_Subtitle drinksText">
+                          <h3>Camera Views</h3>
+                        </div>                            
+                        <a href="#" class="btn btn-success btn-responsive" onclick="cameraView();">View</a>
+                        <a href="#" class="btn btn-primary btn-responsive" onclick="cameraFront();">Front</a>
+                        <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBack();">Back</a>
+                        <a href="#" class="btn btn-primary btn-responsive" onclick="cameraSide();">Side</a>
+                        <a href="#" class="btn btn-primary btn-responsive" onclick="cameraTop();">Top</a>
+                        <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBottom();">Bottom</a>
+                        <a href="#" class="btn btn-secondary btn-responsive" onclick="headlight();">Light</a>
+                        <div class="card-text x3dCameraDescription drinksText">
+                          <p>These buttons select a limited range of X3D model viewpoints.</p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              
+           
+        </div> <!-- End row for the interaction panels -->
+            <!-- Row to hold two cards to hold 1) the X3D model, and 2) the gallery-->
+            <div class="row">
+              <!-- X3D Model -->
+              <div class="col-sm-8">
+                <div class="card text-left">
+                  <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                      <li class="nav-item">
+                        <a id="navCoke" class="nav-link active" href="#">Car</a>
+                      </li>
+                     </ul>
+                  </div>
+                  <div class="card-body">
+                    <!-- Coke X3D model -->
+                    <div id="coke">
+                        <div id="x3dModelTitle_coke" class="card-title drinksText"></div>
+                        <!-- Place the X3D code here -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                  <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/car.x3d" > </inline>
+                                </scene>
+                            </x3d>
+                        </div> 
+                        <div id="x3dCreationMethod_coke" class="card-text drinksText"></div>
+                    </div>
+                
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3D image gallery -->
+              <div class="col-sm-4">
+                <div class="card text-left">
+                    <div class="card-header gallery-header">
+                      <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Gallery</a>
+                        </li>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title title_gallery drinksText"></div>
+                        <div class="gallery" id="gallery"></div>
+                        <div class="card-text description_gallery drinksText"></div>
+                    </div>
+                </div> <!-- End gallery card -->
+              </div> <!-- End gallery column -->
+            </div> <!-- End row for X3D Model and Gallery -->
+          </div> 
+
+          
+
+          <!-- Row to hold one card to hold the coka cola descriptive text, etc.-->
+          <div class="row">
+            <div class="col-sm-11">
+                <div class="card">
+                    <div class="card-body">
+                      <h3 class="card-title">How the Camaro Got its Name</h3>
+                      <p class="card-text">As we count down the days until the release of the 2015 Chevy Camaro at Harbin Auto, we got talking about the actual name, “Camaro.” For many cars of the era, the meaning of the model name was immediately obvious: “Corvette” was a warship, “Mustang” was a horse, and so on. But what on Earth was a “Camaro”? No one had any idea. So we did some digging, trying to find out the history of how the “Camaro” got its name.<br><br>
+
+After Ford released the Mustang for the 1965 model year, Chevy had a problem on its hands. It was selling a pretty fair number of Corvairs and Chevelles, but Ford’s Mustang had begun selling more models than both of those cars combined. So when Chevy began production on its project car to compete with the Mustang, they wanted a name that would stick.<br><br>
+Although the design was code-named “Panther,” this name was never under serious consideration. At the time, Chevrolet was still using the letter “C” for all its cars–Chevelle, Chevy II, etc.–and when they had decided to go forward with the “Panther” design, Chevrolet’s branding team wrote down more than 2,000 words beginning with “C,” many of which were just made up on the spot. (This practice would obviously become the industry standard in time.)<br><br>
+One of the words suggested was Camaro, and a light bulb went on. It didn’t have a clear meaning to anyone, but Chevy would eventually claim that it was found in a French-English dictionary to mean “friend, pal, or comrade.” Simple enough. The Chevy Camaro was born.<br><br>
+Then, competitors started doing some homework. One found a Spanish definition that was “A small, shrimp-like creature,” and a journalist claimed to find a definition that meant “loose bowels.”<br><br>
+Now the fight was on. Chevy countered with a definition that has lived on in automotive circles ever since: “A Camaro is a small, vicious animal that eats Mustangs.” The point had been made, and the rest is history. In later years, Chevy would separate itself from all the gamesmanship and semantics and just own up to what was obvious, for several reasons: Camaro just sounds cool.<br><br>
+And, when the 2015 Chevy Camaro rolls out at Harbin Auto, it will represent nearly 50 years of sounding cool. To keep up-to-date on all the latest news, we encourage you to stop by Harbin Auto in Scottsboro, AL, and also serving the communities of Huntsville and Chattanooga!.</p>    
+                      <a href="https://www.harbinautomotive.com/blog/how-camaro-got-its-name/" class="btn btn-primary">Find out more ...</a>                 
+                    </div>
+                </div>
+            </div>
+      </div>
+
+        
+
+      </div> <!-- End 3D App SPA Contents -->
+      
+      <nav class="navbar navbar-expand-sm footer">
+        <div class="container-fluid">   
+            <div class="navbar-text float-left copyright">
+                <p><span class="align-baseline"></span>&copy 2018 Multimedia Design & Applications </span></p>
+            </div>
+            <div class="navbar-text float-right social">
+                <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
+            </div>
+        </div>
+    </nav> 
+
+
+         <!-- My 3D App modals -->
+      <!-- Contact modal -->
+      <!-- The Modal -->
+   
+
+        <div class="modal fade" id="translateModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Translate the site</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    
+                    <div id="google_translate_element"></div>
+    
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+                </script>
+                
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                
+                <p>You can translate the content of this page by selecting a language in the select box.</p>
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+    
+              </div>
+            </div>
+        </div>
+
+      <!-- JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="js/jquery-3.2.1.js" crossorigin="anonymous"></script>
+      <script src="js/popper.min.js" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script src="js/fontawesome-all.min.js"></script>
+      <!-- Custom JavaScript code for your 3d App -->
+      <script src="js/custom.js" crossorigin="anonymous"></script>
+      <!-- JavaScript to swap for SPA and restyle -->
+      <script src="js/swap_restyle.js"></script>
+      <!-- Include the x3dom JavaScript -->
+      <script type='text/javascript' src='js/x3dom-1.7.2/x3dom.js'></script>
+      <!-- JavaScript and PHP based Gallery generator  -->
+      <script type="text/javascript" src="js/gallery_generator.js"></script>
+      <!-- JQuery code to get content data from a backend JSON file -->
+      <script src="js/getJsonData.js"></script>
+      <!-- JavaScript model interactions -->
+      <script src="js/modelInteractions.js"></script>
+      <!--fancyBox3 => http://fancyapps.com/fancybox/3/ -->
+      <script src="js/jquery.fancybox.min.js"></script>
+      <!--back to top-->
+      <script src="js/Top.js" crossorigin="anonymous"></script>
+
+      <script>
+          function myFunction() {
+          alert("The model is loading, please be patient");
+      }
+      </script>
+  </body>
+</html>

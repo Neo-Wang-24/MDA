@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/Play_Video.css" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
+  
+
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css" crossorigin="anonymous">
+</head>
+
+<title>Video</title>
+
+<body>   
+		
+				<!-- The header with the logo barnd and naviugation menu --> 
+		<nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+
+			  <!-- The logo Brand -->
+			  <div class="logo">
+					<a class="navbar-brand" href="welcome.html">
+					  <h1>Chevrolet</h1>
+					  <h2>CAMARO </h2>
+					  <h3>Videos</h3>
+					  
+					</a>
+				  </div>
+				  <!-- Navbar Menu Icon -->
+				  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+ <!-- link Menu Icon button to the links class navbar-collapse selector] -->
+ <div class="collapse navbar-collapse">
+		<!-- Links -->
+		<ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+			<a class="nav-link active" href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="history.html"><i class="fa fa-book" aria-hidden="true"></i>History</a>
+		  </li>
+	  
+		  <!-- Dropdown -->
+		  <li class="nav-item">
+			<a class="nav-link" href="model.html"><i class="fa fa-car" aria-hidden="true"></i>Model</a> 
+		  </li>
+			  <li class="nav-item">
+			<a class="nav-link" href="game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>Game</a>
+		  </li>
+		</ul>
+	</div>
+</nav>
+
+<div ng-app="myApp">
+<div ng-controller="HomeCtrl as controller">
+	<div class="videogular-container">
+		<videogular vg-player-ready="controller.onPlayerReady($API)" vg-complete="controller.onCompleteVideo()" vg-theme="controller.config.theme.url">
+			<vg-media vg-src="controller.config.sources"
+					  vg-tracks="controller.config.tracks">
+			</vg-media>
+
+			<vg-controls>
+				<vg-play-pause-button></vg-play-pause-button>
+				<vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+				<vg-scrub-bar>
+					<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+				</vg-scrub-bar>
+				<vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+				<vg-volume>
+					<vg-mute-button></vg-mute-button>
+					<vg-volume-bar></vg-volume-bar>
+				</vg-volume>
+				<vg-fullscreen-button></vg-fullscreen-button>
+			</vg-controls>
+
+			<vg-overlay-play></vg-overlay-play>
+			<vg-buffering></vg-buffering>
+			<vg-poster vg-url='controller.config.plugins.poster'></vg-poster>
+		</videogular>
+	</div>
+	<div class="playlist">
+		<ul>
+			<h3>Playlist:</h3>
+			<li><a ng-click="controller.setVideo(0)">1. Advertisement<i class="fa fa-play" aria-hidden="true"></i></a></li>
+			<li><a ng-click="controller.setVideo(1)">2. Animation<i class="fa fa-play" aria-hidden="true"></i></a></li>
+			<li><a ng-click="controller.setVideo(2)">3. My animation<i class="fa fa-play" aria-hidden="true"></i></a></li>
+			<li><a ng-click="controller.setVideo(3)">4. History<i class="fa fa-play" aria-hidden="false"></i></a></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
+<script src="https://unpkg.com/videogular@2.1.2/dist/videogular/videogular.js"></script>
+<script src="https://unpkg.com/videogular@2.1.2/dist/controls/vg-controls.js"></script>
+<script src="https://unpkg.com/videogular@2.1.2/dist/overlay-play/vg-overlay-play.js"></script>
+<script src="https://unpkg.com/videogular@2.1.2/dist/poster/vg-poster.js"></script>
+<script src="https://unpkg.com/videogular@2.1.2/dist/buffering/vg-buffering.js"></script>
+
+<script src="js/Play_Video.js" crossorigin="anonymous"></script>
+
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="js/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+ <script src="js/popper.min.js" crossorigin="anonymous"></script>
+ <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+ <script src="js/fontawesome-all.min.js"></script>
+</body>
+</html>

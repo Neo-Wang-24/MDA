@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic racer</title>
+    <link href="Game/style1.css" rel="stylesheet" /> </head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <a href="history.html"><i class="fa fa-book" aria-hidden="true"></i>History</a>
+        <a href="model.html"><i class="fa fa-car" aria-hidden="true"></i>Model</a>
+        <a href="video.html"><i class="fa fa-video" aria-hidden="true"></i>Video</a>
+ </div>
+
+    <div id="help">
+        <p>Controls: Right, Left, Up & Down arrow keys.</p>
+    </div>
+    <div id="score_div">
+        Score: <span id="score">0</span>
+    </div>
+    <div id="container">
+        <div id="line_1" class="line"></div>
+        <div id="line_2" class="line"></div>
+        <div id="line_3" class="line"></div>
+        <div id="line_4" class="line"></div>
+        <div id="car" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_1" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_2" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_3" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_4" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_5" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="restart_div">
+            <button id="restart">
+                Crashed! Thanks for playing!<br><br>
+                Restart<br>
+                <small class="small_text">(press Enter)</small>
+            </button>
+        </div>
+
+        <div id="won_div">
+            <button id="won">
+                Congrates, you won the race!<br><br>
+                Play again<br>
+                <small class="small_text">(press Enter)</small>
+            </button>
+        </div>
+    </div>
+    
+
+    <script src="Game/jquery.min.js"></script>
+    <script src="Game/game.js"></script>
+    <script src="js/fontawesome-all.min.js"></script>
+</body>
+
+</html>
